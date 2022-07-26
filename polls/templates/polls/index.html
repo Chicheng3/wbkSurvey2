@@ -1,0 +1,139 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbk polls</title>
+    <link rel="icon" type="image/x-icon" href="wbk-logo.ico">
+    {% load static %}
+    <!-- load CSS -->
+    <link rel="stylesheet" href="{% static 'polls/css/googleapis.fonts.css' %}">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="{% static 'polls/css/materialize.min.css' %}">
+    <!-- https://materializecss.com -->
+    <link rel="stylesheet" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="{% static 'polls/css/all.min.css' %}">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="{% static 'polls/css/templatemo-style.css' %}">
+    <!-- Template Mo style -->
+    <link rel="stylesheet" href="{% static 'polls/css/top.css' %}">
+    <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+    <!-- logo on the top -->
+    <link rel="shortcut icon" href="{% static 'polls/img/wbk-logo.ico' %}"/>
+    <!-- logo as favicon -->
+    
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-md-12">
+                <span class="icon-wbk"><span class="path1"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                <br>
+                <h1 class="tm-site-name">Herzlichen Willkommen zu der Mitarbeiterbefragaung</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-parallax"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tm-intro">
+                <div class="col-sm-12 col-md-8 mb-md-0 mb-4 tm-intro-left">
+                    <p class="mb-0">
+                        Das wbkSurvey ist ein institutsinternes Tool zur Durchführung einer Befragung. Diese Version ist in der Linie für unsere Implementierungsstrategie
+                        der Industrie 4.0 entwickelt worden. Hierbei sollen alle Teilnehmenden phasenweise an Befragung teilnehmen und bestimmte Einflussfaktoren bewerten.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <em>
+                        <p class="tm-highlight">&ldquo;Vielen Dank für Ihre Unterstützung und Ihren wissenschaftlichen Beitrag&rdquo;</p>
+                    </em>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Mitarbeiterbefragung</h1>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row" style^="">
+            {% if surveys %}
+            {% for qs in surveys %}
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card" style="width: auto;height: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Befragung</h5>
+                        <p class="card-text">{{ qs.title }}</p>
+                        <div>
+                            <a href="{% url 'polls:get_survey' qs.id %}"
+                                class="btn btn-outline-secondary btn-lg btn-block"
+                                style="position: absolute;bottom: 5%;width:85%;">Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-12">
+                <h2 class="tm-question-none">No question are available!</h2>
+            </div>
+            {% endif %}
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <p class="text-center mb-3 tm-footer-text">Copyright &copy;
+                        <a href="/admin" target="_blank"><strong>wbk Huang</strong></a>
+                        2022</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- 回到顶部-->
+        <div class="float-bar vm_" id="top-icon" style="visibility:hidden">
+            <div class="float-bar-item vm_" onclick="topFunction()"
+                style="border-radius: 4px; border: 1px solid rgb(243, 244, 245);">
+                <div class="float-bar-item-icon vm_">
+                    <svg t="1584178345280" class="icon" viewbox= "0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="5525" width="36" height="36">
+                        <path
+                            d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z"
+                            fill="#a3a3ac" p-id="5526"></path>
+                    </svg>
+                </div>
+                <div class="float-bar-item-content vm_" style="bottom: 3px; padding: 10px 50px;">
+                    <div class="gray-c">回到顶部</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'polls/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'polls/js/materialize.min.js' %}"></script>
+    <script src="{% static 'polls/js/page.js' %}"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?mdxpg2');
+  src:  url('fonts/icomoon.eot?mdxpg2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?mdxpg2') format('truetype'),
+    url('fonts/icomoon.woff?mdxpg2') format('woff'),
+    url('fonts/icomoon.svg?mdxpg2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wbk .path1:before {
+  content: "\e900";
+  color: rgb(56, 165, 141);
+  font-size: 60px;
+}
+.icon-wbk .path2:before {
+  content: "\e901";
+  margin-left: -2.103515625em;
+  color: rgb(251, 251, 251);
+  font-size: 60px;
+}
+.icon-wbk .path3:before {
+  content: "\e902";
+  margin-left: -2.103515625em;
+  color: rgb(162, 208, 194);
+  font-size: 60px;
+}
+.icon-wbk .path4:before {
+  content: "\e903";
+  margin-left: -2.103515625em;
+  color: rgb(200, 228, 220);
+  font-size: 60px;
+}
+.icon-wbk .path5:before {
+  content: "\e904";
+  margin-left: -2.103515625em;
+  color: rgb(140, 196, 180);
+  font-size: 60px;
+}
+.icon-home:before {
+  content: "\e90d";
+}
+.icon-home2:before {
+  content: "\e90e";
+}
+.icon-image:before {
+  content: "\e90f";
+}
+.icon-connection:before {
+  content: "\e91b";
+}
